@@ -1,352 +1,308 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>mLITE</title>
-  <link rel="icon" href="{?=url()?}/{$settings.logo}" type="image/x-icon">
-  <link href="{?=url()?}/assets/css/{$settings.theme_admin}.min.css" rel="stylesheet">
-  <link href="{?=url()?}/assets/css/animate.min.css" rel="stylesheet">
-  <link href="{?=url(THEMES.'/admin/css/style.css')?}" rel="stylesheet">
-  <link href="{?=url()?}/assets/css/font-awesome.css" rel="stylesheet">
-  <!-- PWA Support -->
-  <link rel="manifest" href="{?=url()?}/manifest.json" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="application-name" content="mLITE" />
-  <meta name="apple-mobile-web-app-title" content="mLITE" />
-  <meta name="theme-color" content="#222" />
-  <meta name="msapplication-navbutton-color" content="#222" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="green-translucent" />
-  <meta name="msapplication-starturl" content="{?=url()?}" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="icon" sizes="128x128" href="{?=url()?}/assets/images/icon-128x128.png" />
-  <link rel="apple-touch-icon" sizes="128x128" href="{?=url()?}/assets/images/icon-128x128.png" />
-  <link rel="icon" sizes="192x192" href="{?=url()?}/assets/images/icon-192x192.png" />
-  <link rel="apple-touch-icon" sizes="192x192" href="{?=url()?}/assets/images/icon-192x192.png" />
-  <link rel="icon" sizes="256x256" href="{?=url()?}/assets/images/icon-256x256.png" />
-  <link rel="apple-touch-icon" sizes="256x256" href="{?=url()?}/assets/images/icon-256x256.png" />
-  <link rel="icon" sizes="384x384" href="{?=url()?}/assets/images/icon-384x384.png" />
-  <link rel="apple-touch-icon" sizes="384x384" href="{?=url()?}/assets/images/icon-384x384.png" />
-  <link rel="icon" sizes="512x512" href="{?=url()?}/assets/images/icon-512x512.png" />
-  <link rel="apple-touch-icon" sizes="512x512" href="{?=url()?}/assets/images/icon-512x512.png" />
-  <!-- End PWA Support -->
-  <script src="{?=url()?}/assets/jscripts/jquery.min.js"></script>
+  <title>PintarSehat</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{?=url()?}/assets/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet"
+    href="{?=url()?}/assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="{?=url()?}/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="{?=url()?}/assets/plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{?=url()?}/assets/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="{?=url()?}/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="{?=url()?}/assets/plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="{?=url()?}/assets/plugins/summernote/summernote-bs4.min.css">
   <script src="{?=url()?}/assets/jscripts/bootstrap.min.js"></script>
-  <script src="{?=url()?}/assets/jscripts/bootbox.min.js"></script>
-  <script src="{?=url()?}/assets/jscripts/html.sortable.min.js"></script>
-  <script src="{?=url()?}/assets/jscripts/tinynav.min.js"></script>
-  <script src="{?=url(THEMES.'/admin/js/kalypto.min.js')?}"></script>
-  <script src="{?=url(THEMES.'/admin/js/selectator.js')?}"></script>
-  <style>
-    html {
-      height: 0;
-      background: url('{?=url()?}/{$settings.wallpaper}') no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
-
-    body {
-      height: 0;
-    }
-
-    #content-wrapper {
-      top: 0;
-      background: transparent;
-    }
-
-    .dashboard_wall {
-      position: fixed;
-      bottom: 120px;
-      left: 80px;
-      width: 100%;
-
-      color: {
-        $settings.text_color
-      }
-
-       !important;
-    }
-
-    p.title {
-      position: absolute;
-      bottom: 30px;
-      left: 140px;
-      font-size: 32px;
-      text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
-    }
-
-    p.alamat {
-      position: absolute;
-      bottom: 0px;
-      left: 140px;
-      font-size: 16px;
-      text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
-    }
-
-    @media (max-width: 768px) {
-      .dashboard_wall {
-        position: fixed;
-        bottom: 80px;
-        left: 0px;
-        min-width: 600px;
-      }
-
-      img.logo {
-        width: 80px;
-      }
-
-      p.title {
-        position: absolute;
-        bottom: 10px;
-        left: 80px;
-        font-size: 18px;
-        text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
-      }
-
-      p.alamat {
-        position: absolute;
-        bottom: 0px;
-        left: 80px;
-        font-size: 10px;
-        text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
-      }
-    }
-  </style>
 
 </head>
 
-<body>
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed ">
+  <div class="wrapper">
 
-  <div id="wrapper">
+    <!-- Preloader -->
+    <!-- <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="{?=url()?}/assets/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div> -->
 
-    <div id="navbar-wrapper">
-      <nav class="navbar navbar-inverse mobile-fixed-top hidden-lg hidden-md" style="z-index:1000;">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a href="#">
-              <img class="logo" src="{?=url()?}/{$mlite.logo}" alt="">
-              <span class="navbar-brand truncated"> {$mlite.nama_instansi} </span>
-            </a>
-          </div>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" class="fa fa-key" data-toggle="modal" data-target="#menuModal" title="Login"></a></li>
-          </ul>
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
+            <i class="fas fa-th-large"></i>
+          </a>
+        </li> -->
+      </ul>
+      <div class="user-panel p-1  d-flex">
+        <a href="#" class="fa fa-key" data-toggle="modal" data-target="#menuModal" title="Login"></a>
+        <!-- <div class="image">
+          <img src="{?=url()?}/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
-      </nav>
-    </div>
-    <nav class="navbar navbar-inverse navbar-fixed-top visible-lg visible-md" style="margin-bottom:0;font-size:16px;">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <li><a href="#" data-toggle="modal" data-target="#menuModal"><img class="img-responsive"
-                src="{?= url('/assets/img/icon-home.png') ?}"
-                style="display:inline-block;height:24px;margin-top:-2px;margin-right:5px;" alt=""> Menu</a></li>
-          {if: $mlite.module_pasien}
-          <li><a href="#" class="btn disabled"><img class="menu_icon" src="{?= url('/assets/img/icon-pasien.png') ?}"
-                alt=""> Pasien</a></li>
-          {/if}
-          {if: $mlite.module_igd}
-          <li><a href="#" class="btn disabled"><img class="menu_icon" src="{?= url('/assets/img/icon-igd.png') ?}"
-                alt=""> IGD</a></li>
-          {/if}
-          {if: $mlite.module_rawat_jalan}
-          <li><a href="#" class="btn disabled"><img class="menu_icon" src="{?= url('/assets/img/icon-ralan.png') ?}"
-                alt=""> Rawat Jalan</a></li>
-          {/if}
-          {if: $mlite.module_rawat_inap}
-          <li><a href="#" class="btn disabled"><img class="menu_icon" src="{?= url('/assets/img/icon-ranap.png') ?}"
-                alt=""> Rawat Inap</a></li>
-          {/if}
-          {if: $mlite.cek_anjungan}
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img class="menu_icon"
-                src="{?= url('/assets/img/icon-informasi.png') ?}" alt=""> Anjungan
-              <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              {if: $mlite.presensi}
-              <li><a href="{?=url()?}/anjungan/presensi" target="_blank">Presensi Pegawai</a></li>
-              <li role="separator" class="divider"></li>
-              {/if}
-              <li><a href="#">Rawat Jalan</a></li>
-              <li><a href="#">Rawat Inap</a></li>
-              <li><a href="#">Laboratorium</a></li>
-              <li><a href="#">Radiologi</a></li>
-              <li><a href="{?=url()?}/anjungan/bed" target="_blank">Ketersediaan Kamar</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="{?=url()?}/anjungan/pasien" target="_blank">Anjungan Pasien Mandiri</a></li>
-              <li><a href="{?=url()?}/anjungan/sep" target="_blank">Anjungan Cetak SEP</a></li>
-              <li><a href="{?=url()?}/anjungan/loket" target="_blank">Antrian Loket</a></li>
-              <li><a href="{?=url()?}/anjungan/laboratorium" target="_blank">Antrian Laboratorium</a></li>
-              <li><a href="{?=url()?}/anjungan/apotek" target="_blank">Antrian Apotek</a></li>
-              <li><a href="{?=url()?}/anjungan/poli" target="_blank">Antrian Poliklinik</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="{?=url()?}/anjungan/poli/all" target="_blank">Antrian Poliklinik Alternatif</a></li>
-              {loop: $mlite.poliklinik}
-              {if: $value.attr == 'selected'}
-              <li><a href="{?=url()?}/anjungan/poli/{$value.kd_poli}" target="_blank">Antrian {$value.nm_poli}</a></li>
-              {/if}
-              {/loop}
-            </ul>
-          </li>
-          {/if}
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img class="menu_icon"
-                src="{?= url('/assets/img/icon-about.png') ?}" alt=""> mLITE
-              <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#" data-toggle="modal" data-target="#tentangModal"> Tentang</a></li>
-              <li><a href="#" data-toggle="modal" data-target="#bantuanModal"> Bantuan</a></li>
-              <li><a href="#" data-toggle="modal" data-target="#menuModal"> Login</a></li>
-            </ul>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#" class="fa fa-key" data-toggle="modal" data-target="#menuModal" title="Login"></a></li>
-        </ul>
+        <div class="info">
+          <a href="#" class="d-block" style="color: #000080;font-weight:1000">Krisna eka</a>
+        </div> -->
       </div>
     </nav>
+    <!-- /.navbar -->
 
-    <div class="dashboard_wall">
-      <img src="{?=url()?}/{$settings.logo}" class="logo" width="120px" alt="">
-      <p class="title">{$settings.nama_instansi}</p>
-      <p class="alamat">{$settings.alamat} - {$settings.kota} - {$settings.propinsi}</p>
-    </div>
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background: #000080;">
+      <!-- Brand Logo -->
+      <a href="index3.html" class="brand-link" style="background: #000080;border:none;">
+        <img src="{?=url()?}/assets/dist/img/logo12.png" class="brand-image">
+        <span class="brand-text" style="font-weight:1000;color: white;">&nbsp PintarSehat</span>
+      </a>
 
+      <!-- Sidebar -->
+      <div class="sidebar" style="background: #000080;">
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <br><br>
+            <li class="nav-item">
+              <a href="#" data-toggle="modal" data-target="#menuModal" class="nav-link"
+                style="color:white;font-weight:1000;border-radius:10px;">
+                <i class="nav-icon fas fa-bars"></i>
+                <p>
+                  Menu
+                </p>
+              </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a href="#" class="nav-link" style="background: white;color:#000080;font-weight:1000;border-radius:10px;">
+                <i class="nav-icon fas fa-bars"></i>
+                <p>
+                  Menu
+                  <i class="fas fa-angle-right right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/tables/simple.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Simple Tables</p>
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-toggle="modal" data-target="#menuModal" 
+                style="color:white;font-weight:1000;border-radius:10px;">
+                <i class="nav-icon fas fa-ambulance"></i>
+                <p>
+                  IGD
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-toggle="modal" data-target="#menuModal"  style="color:white;font-weight:1000;border-radius:10px;">
+                <i class="nav-icon fas fa-user"></i>
+                <p>
+                  Pasien
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-toggle="modal" data-target="#menuModal"  style="color:white;font-weight:1000;border-radius:10px;">
+                <i class="nav-icon fas fa-stethoscope"></i>
+                <p>
+                  Rawat Inap
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-toggle="modal" data-target="#menuModal"  style="color:white;font-weight:1000;border-radius:10px;">
+                <i class="nav-icon fas fa-stethoscope"></i>
+                <p>
+                  Rawat Jalan
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" style="color:white;font-weight:1000;border-radius:10px;">
+                <i class="nav-icon fas fa-th-large"></i>
+                <p>
+                  Anjungan
+                  <i class="fas fa-angle-right right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                {if: $mlite.presensi}
+                <li class="nav-item"><a class="nav-link" href="{?=url()?}/anjungan/presensi" target="_blank"><i
+                      class="far fa-circle nav-icon"></i>Presensi Pegawai</a></li>
+                <li class="nav-item" ro class="nav-link"le="separator" class="divider"></li>
+                {/if}
+                <li class="nav-item"><a class="nav-link" href="#"><i class="far fa-circle nav-icon"></i>Rawat Jalan</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="far fa-circle nav-icon"></i>Rawat Inap</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="far fa-circle nav-icon"></i>Laboratorium</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="far fa-circle nav-icon"></i>Radiologi</a></li>
+                <li class="nav-item"><a class="nav-link" href="{?=url()?}/anjungan/bed" target="_blank"><i class="far fa-circle nav-icon"></i>Ketersediaan Kamar</a></li>
+                <li class="nav-item" ro class="nav-link"le="separator" class="divider"></li>
+                <li class="nav-item"><a class="nav-link" href="{?=url()?}/anjungan/pasien" target="_blank"><i class="far fa-circle nav-icon"></i>Anjungan Pasien Mandiri</a></li>
+                <li class="nav-item"><a class="nav-link" href="{?=url()?}/anjungan/sep" target="_blank"><i class="far fa-circle nav-icon"></i>Anjungan Cetak SEP</a></li>
+                <li class="nav-item"><a class="nav-link" href="{?=url()?}/anjungan/loket" target="_blank"><i class="far fa-circle nav-icon"></i>Antrian Loket</a></li>
+                <li class="nav-item"><a class="nav-link" href="{?=url()?}/anjungan/laboratorium" target="_blank"><i class="far fa-circle nav-icon"></i>Antrian Laboratorium</a></li>
+                <li class="nav-item"><a class="nav-link" href="{?=url()?}/anjungan/apotek" target="_blank"><i class="far fa-circle nav-icon"></i>Antrian Apotek</a></li>
+                <li class="nav-item"><a class="nav-link" href="{?=url()?}/anjungan/poli" target="_blank"><i class="far fa-circle nav-icon"></i>Antrian Poliklinik</a></li>
+                <li class="nav-item" ro class="nav-link"le="separator" class="divider"></li>
+                <li class="nav-item"><a class="nav-link" href="{?=url()?}/anjungan/poli/all" target="_blank"><i class="far fa-circle nav-icon"></i>Antrian Poliklinik Alternatif</a></li>
+                {loop: $mlite.poliklinik}
+                {if: $value.attr == 'selected'}
+                <li class="nav-item"><a class="nav-link" href="{?=url()?}/anjungan/poli/{$value.kd_poli}" target="_blank"><i class="far fa-circle nav-icon"></i>Antrian
+                    {$value.nm_poli}</a></li>
+                {/if}
+                {/loop}
+              </ul>
+            </li>
+            <!-- <li class="nav-item">
+              <a href="#" class="nav-link" style="color:white;font-weight:1000;border-radius:10px;">
+                <i class="nav-icon fas fa-plus"></i>
+                <p>
+                  PintarSehat
+                  <i class="fas fa-angle-right right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/tables/simple.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Simple Tables</p>
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </nav>
+    </aside>
 
-  </div>
-
-  <footer class="visible-lg visible-md bg-primary" style="padding-bottom:30px;z-index:1000;">
-    <p class="pull-right">
-      Made with <i class="fa fa-heart text-danger"></i> by <a href="https://basoro.id/" target="_blank"><b>drg. F.
-          Basoro</b>.</a>
-      {$mlite.powered}.
-    </p>
-    <p><i class="fa fa-fw fa-calendar"></i> <span>{$mlite.tanggal}</span> <i class="fa fa-fw fa-clock-o"></i><span
-        id="clock"></span> <i class="fa fa-fw fa-user"></i> <span>Belum login</span></p>
-  </footer>
-
-  <div class="icon-bar hidden-lg hidden-md">
-    <a href="#" data-toggle="modal" data-target="#menuModal"><i class="fa fa-home"></i></a>
-    <a href="#" class="btn disabled"><i class="fa fa-users"></i></a>
-    <a href="#" class="btn disabled"><i class="fa fa-ambulance"></i></a>
-    <a href="#" class="btn disabled"><i class="fa fa-wheelchair"></i></a>
-    <a href="#" class="btn disabled"><i class="fa fa-hotel"></i></a>
-  </div>
-
-  <!-- Modal -->
-  <div class="modal fade modal-xs" id="menuModal" tabindex="-1" role="dialog">
-    <div id="login">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <img src="{?=url()?}/{$mlite.logo}" alt="logo">
-          <h2>m<span>LITE</span></h2>
-        </div>
-        <div class="panel-body">
-          <form action="{?=url()?}/admin/" method="POST">
-            <div class="form-group">
-              <div class="input-group">
-                <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                <input type="text" name="username" class="form-control" placeholder="Nama Pengguna" required />
-              </div>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" style="background-image: url('{?=url()?}/uploads/settings/bg.png');">
+      <!-- <img src="{?=url()?}/uploads/settings/bg.png" alt=""> -->
+      <!-- Content Header (Page header) -->
+      <!-- /.content -->
+      <div class="modal fade modal-xs"  id="menuModal"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- <div class="modal fade modal-xs" data-backdrop="static" data-keyboard="false" id="menuModal"
+          aria-labelledby="exampleModalLabel" aria-hidden="true"> -->
+        <div class="modal-dialog  modal-dialog-centered" id="login">
+          <div class="modal-content" style="border-radius: 20px;">
+            <div class="modal-body" style="border-radius: 20px;">
+              <center>
+                <!-- <img src="{?=url()?}/uploads/settings/logo3.png" class="mb-2" style="width: 100%;max-height:100px;"> -->
+                <img src="{?=url()?}/uploads/settings/logo3.png" class="mb-2">
+              </center>
+              <form action="{?=url()?}/admin/" method="POST">
+                <div class="input-group mb-2 mr-sm-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text" style="background: white;border-right:none"><i class="fa fa-user"></i>
+                    </div>
+                  </div>
+                  <input type="text" name="username" style="border-left:none" class="form-control"
+                    placeholder="Username" required />
+                </div>
+                <div class="input-group mb-2 mr-sm-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text" style="background: white;border-right:none"><i class="fa fa-lock"></i>
+                    </div>
+                  </div>
+                  <input type="password" name="password" style="border-left:none" class="form-control"
+                    placeholder="Password" required />
+                </div>
+                <div class="d-flex form-group justify-content-between">
+                  <label class="remember-me">
+                    <input type="checkbox" name="remember_me" />
+                    Ingat saya
+                  </label>
+                  <button type="submit" name="login" class="btn btn-primary pull-right"
+                    style="background: #000080;">Login</button>
+                </div>
+              </form>
+              {if: $mlite.notify}
+              <div id="notify" class="alert-{$mlite.notify.type} animated shake">{$mlite.notify.text}</div>
+              {/if}
             </div>
-            <div class="form-group">
-              <div class="input-group">
-                <div class="input-group-addon"><i class="fa fa-lock"></i></div>
-                <input type="password" name="password" class="form-control" placeholder="Password" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="remember-me pull-left">
-                <input type="checkbox" name="remember_me" />
-                Ingat saya
-              </label>
-              <button type="submit" name="login" class="btn btn-primary pull-right">Sign In</button>
-            </div>
-          </form>
-        </div>
-      </div>
-      {if: $mlite.notify}
-      <div id="notify" class="alert-{$mlite.notify.type} animated shake">{$mlite.notify.text}</div>
-      {/if}
-    </div>
-  </div>
-  <div class="modal fade" id="bantuanModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-              aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Bantuan mLITE</h4>
-        </div>
-        <div class="modal-body">
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="tentangModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-xs" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-              aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Tentang mLITE</h4>
-        </div>
-        <div class="modal-body">
-          <div class="text-center">
-            <img src="{?=url()?}/themes/admin/img/logo.png" width="50px" alt="">
-            <h4>
-              mLITE
-              <div class="">
-                <small>
-                  {$mlite.version}
-                </small>
-              </div>
-            </h4>
-            <p>The awesome HIS alternate<br>
-              Clean, Light and Modular Medical Management Systems</p>
-            <p>Made with <i class="fa fa-heart text-danger"></i> and <i class="fa fa-coffee text-primary"></i> by <a
-                href="https://basoro.id/" target="_blank"><b>drg. F. Basoro</b></a> & Friends.</p>
-            <p>Thank you to our main sponsors <span class="badge badge-info badge-style-light">RSUD H. Damanhuri
-                Barabai</span> and <span class="badge badge-warning badge-style-light">RS Aura Syifa Kediri</span>. Also
-              the Klinik Utama Cahaya Imani Kandangan, RSIA Muntilan Magelang, RSU Ceria Kandangan, RSUD Datu Sanggul
-              Rantau, RSUD Daha Sejahtera Kandangan and other hospitals that we cannot mention one by one. Also
-              contributors who have been involved in development.</p>
-            <p>Email: dentix.id@gmail.com - Telegram: @basoro</p>
-            <p>Copyright © 2018 - {?=date('Y')?}</p>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
-        </div>
       </div>
     </div>
-  </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+      <strong>Copyright <a href="https://adminlte.io">PintarSehat</a>.</strong>
+      <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 0.1
+      </div>
+    </footer>
 
-  <!-- PWA Support -->
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <script src="{?=url()?}/assets/plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="{?=url()?}/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
   <script>
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker
-          .register("{?=url()?}/service-worker.js")
-          .then((swReg) => {
-            //console.log("Service Worker is registered", swReg);
-          })
-          .catch((err) => {
-            //console.error("Service Worker Error", err);
-          });
-      });
-    }
+    $.widget.bridge('uibutton', $.ui.button)
   </script>
-  <!-- End PWA Support -->
-  <script src="{?= url(THEMES.'/admin/js/scripts.js') ?}"></script>
+  <!-- Bootstrap 4 -->
+  <script src="{?=url()?}/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="{?=url()?}/assets/plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="{?=url()?}/assets/plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="{?=url()?}/assets/plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="{?=url()?}/assets/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="{?=url()?}/assets/plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="{?=url()?}/assets/plugins/moment/moment.min.js"></script>
+  <script src="{?=url()?}/assets/plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="{?=url()?}/assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="{?=url()?}/assets/plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="{?=url()?}/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="{?=url()?}/assets/dist/js/adminlte.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <!-- <script src="{?=url()?}/assets/dist/js/demo.js"></script> -->
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="{?=url()?}/assets/dist/js/pages/dashboard.js"></script>
 </body>
 
 </html>

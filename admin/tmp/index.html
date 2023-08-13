@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PintarSehat</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="http://localhost/pintar/assets/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet"
+    href="http://localhost/pintar/assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="http://localhost/pintar/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="http://localhost/pintar/assets/plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="http://localhost/pintar/assets/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="http://localhost/pintar/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="http://localhost/pintar/assets/plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="http://localhost/pintar/assets/plugins/summernote/summernote-bs4.min.css">
+  
+  <link rel="icon" href="http://localhost/pintar/uploads/settings/logo2.png" type="image/x-icon">
+  <link href="http://localhost/pintar/assets/css/ataaka.min.css" rel="stylesheet">
+  <link href="http://localhost/pintar/assets/css/animate.min.css?v=2023-01-01 00:00:01" rel="stylesheet">
+  <link href="http://localhost/pintar/themes/admin/css/style.css?v=2023-01-01 00:00:01&t=d6a63defd985" rel="stylesheet">
+  <link href="http://localhost/pintar/assets/css/font-awesome.css?v=2023-01-01 00:00:01" rel="stylesheet">
+  
+  <script src="http://localhost/pintar/assets/jscripts/bootstrap.min.js"></script>
+  <script src="http://localhost/pintar/assets/jscripts/jquery.min.js?v=2023-01-01 00:00:01"></script>
+  <script src="http://localhost/pintar/assets/jscripts/bootstrap.min.js?v=2023-01-01 00:00:01"></script>
+  <script src="http://localhost/pintar/assets/jscripts/bootbox.min.js?v=2023-01-01 00:00:01"></script>
+  <script src="http://localhost/pintar/assets/jscripts/html.sortable.min.js?v=2023-01-01 00:00:01"></script>
+  <script src="http://localhost/pintar/assets/jscripts/tinynav.min.js?v=2023-01-01 00:00:01"></script>
+  <script src="http://localhost/pintar/themes/admin/js/kalypto.min.js?v=2023-01-01 00:00:01&t=d6a63defd985"></script>
+  <script src="http://localhost/pintar/themes/admin/js/selectator.js?v=2023-01-01 00:00:01&t=d6a63defd985"></script>
+  <script>
+    var mlite = {
+      token: "d6a63defd985",
+      url: "http://localhost/pintar",
+      admin: "admin"
+    };
+  </script>
+  <meta name="generator" content="Medic LITE Indonesia" />
+<script src="http://localhost/pintar/plugins/dashboard/js/admin/webcam.js?v=2023-01-01 00:00:01&t=d6a63defd985"></script>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed ">
+  <div class="wrapper">
+
+    <!-- Preloader -->
+    <!-- <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="http://localhost/pintar/assets/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div> -->
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
+            <i class="fas fa-th-large"></i>
+          </a>
+        </li> -->
+      </ul>
+      <div class="user-panel p-1  d-flex">
+        <a href="#" class="fa fa-key" data-toggle="modal" data-target="#menuModal" title="Login"></a>
+        <!-- <div class="image">
+          <img src="http://localhost/pintar/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block" style="color: #000080;font-weight:1000">Krisna eka</a>
+        </div> -->
+      </div>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background: #000080;">
+      <!-- Brand Logo -->
+      <a href="index3.html" class="brand-link" style="background: #000080;border:none;">
+        <img src="http://localhost/pintar/assets/dist/img/logo12.png" class="brand-image">
+        <span class="brand-text" style="font-weight:1000;color: white;">&nbsp PintarSehat</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar" style="background: #000080;">
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <br><br>
+            <li class="nav-item">
+              <a href="#" data-toggle="modal" data-target="#menuModal" class="nav-link"
+                style="color:white;font-weight:1000;border-radius:10px;">
+                <i class="nav-icon fas fa-bars"></i>
+                <p>
+                  Menu
+                </p>
+              </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a href="#" class="nav-link" style="background: white;color:#000080;font-weight:1000;border-radius:10px;">
+                <i class="nav-icon fas fa-bars"></i>
+                <p>
+                  Menu
+                  <i class="fas fa-angle-right right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/tables/simple.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Simple Tables</p>
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-toggle="modal" data-target="#menuModal"
+                style="color:white;font-weight:1000;border-radius:10px;">
+                <i class="nav-icon fas fa-ambulance"></i>
+                <p>
+                  IGD
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-toggle="modal" data-target="#menuModal"
+                style="color:white;font-weight:1000;border-radius:10px;">
+                <i class="nav-icon fas fa-user"></i>
+                <p>
+                  Pasien
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-toggle="modal" data-target="#menuModal"
+                style="color:white;font-weight:1000;border-radius:10px;">
+                <i class="nav-icon fas fa-stethoscope"></i>
+                <p>
+                  Rawat Inap
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-toggle="modal" data-target="#menuModal"
+                style="color:white;font-weight:1000;border-radius:10px;">
+                <i class="nav-icon fas fa-stethoscope"></i>
+                <p>
+                  Rawat Jalan
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" style="color:white;font-weight:1000;border-radius:10px;">
+                <i class="nav-icon fas fa-th-large"></i>
+                <p>
+                  Anjungan
+                  <i class="fas fa-angle-right right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                                <li class="nav-item"><a class="nav-link" href="http://localhost/pintar/anjungan/presensi" target="_blank"><i
+                      class="far fa-circle nav-icon"></i>Presensi Pegawai</a></li>
+                <li class="nav-item" ro class="nav-link" le="separator" class="divider"></li>
+                                <li class="nav-item"><a class="nav-link" href="#"><i class="far fa-circle nav-icon"></i>Rawat Jalan</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="far fa-circle nav-icon"></i>Rawat Inap</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="far fa-circle nav-icon"></i>Laboratorium</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="far fa-circle nav-icon"></i>Radiologi</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="http://localhost/pintar/anjungan/bed" target="_blank"><i
+                      class="far fa-circle nav-icon"></i>Ketersediaan Kamar</a></li>
+                <li class="nav-item" ro class="nav-link" le="separator" class="divider"></li>
+                <li class="nav-item"><a class="nav-link" href="http://localhost/pintar/anjungan/pasien" target="_blank"><i
+                      class="far fa-circle nav-icon"></i>Anjungan Pasien Mandiri</a></li>
+                <li class="nav-item"><a class="nav-link" href="http://localhost/pintar/anjungan/sep" target="_blank"><i
+                      class="far fa-circle nav-icon"></i>Anjungan Cetak SEP</a></li>
+                <li class="nav-item"><a class="nav-link" href="http://localhost/pintar/anjungan/loket" target="_blank"><i
+                      class="far fa-circle nav-icon"></i>Antrian Loket</a></li>
+                <li class="nav-item"><a class="nav-link" href="http://localhost/pintar/anjungan/laboratorium" target="_blank"><i
+                      class="far fa-circle nav-icon"></i>Antrian Laboratorium</a></li>
+                <li class="nav-item"><a class="nav-link" href="http://localhost/pintar/anjungan/apotek" target="_blank"><i
+                      class="far fa-circle nav-icon"></i>Antrian Apotek</a></li>
+                <li class="nav-item"><a class="nav-link" href="http://localhost/pintar/anjungan/poli" target="_blank"><i
+                      class="far fa-circle nav-icon"></i>Antrian Poliklinik</a></li>
+                <li class="nav-item" ro class="nav-link" le="separator" class="divider"></li>
+                <li class="nav-item"><a class="nav-link" href="http://localhost/pintar/anjungan/poli/all" target="_blank"><i
+                      class="far fa-circle nav-icon"></i>Antrian Poliklinik Alternatif</a></li>
+                                                                                                                              </ul>
+            </li>
+            <!-- <li class="nav-item">
+              <a href="#" class="nav-link" style="color:white;font-weight:1000;border-radius:10px;">
+                <i class="nav-icon fas fa-plus"></i>
+                <p>
+                  PintarSehat
+                  <i class="fas fa-angle-right right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/tables/simple.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Simple Tables</p>
+                  </a>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
+        </nav>
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <div class="container-fluid mt-5 p-5">
+        <style>
+  html {
+    height: 0;
+    background: url('http://localhost/pintar/uploads/settings/wallpaper.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  body {
+    height: 0;
+  }
+
+  #content-wrapper {
+    top: 0;
+    background: transparent;
+  }
+
+  .dashboard_wall {
+    position: fixed;
+    bottom: 120px;
+    left: 80px;
+    width: 100%;
+    color: #44813e !important;
+  }
+
+  p.title {
+    position: absolute;
+    bottom: 30px;
+    left: 140px;
+    font-size: 32px;
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+  }
+
+  p.alamat {
+    position: absolute;
+    bottom: 0px;
+    left: 140px;
+    font-size: 16px;
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+  }
+
+  div.coba {
+    position: relative !important;
+    top: 47px;
+    margin: 0 15px;
+    /* display: none; */
+  }
+
+  @media (max-width: 600px) {
+    .dashboard_wall {
+      position: fixed;
+      bottom: 100px;
+      left: 0px;
+      min-width: 600px;
+    }
+
+    img.logo {
+      width: 80px;
+    }
+
+    p.title {
+      position: absolute;
+      bottom: 20px;
+      left: 80px;
+      font-size: 18px;
+      text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+    }
+
+    p.alamat {
+      position: absolute;
+      bottom: 10px;
+      left: 80px;
+      font-size: 10px;
+      text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+    }
+
+    div.coba.halo {
+      position: absolute;
+      width: 82px;
+      height: 20px;
+      left: 80px;
+      top: 80px;
+
+      font-family: Graphik;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 20px;
+      /* identical to box height */
+
+
+      color: #FFFFFF;
+    }
+
+    div.coba {
+      position: relative;
+      width: 250px;
+      height: 144px;
+      left: 0px;
+      top: 130px;
+      margin: 0;
+
+      /* background: linear-gradient(269.6deg, #56549E 0.35%, #AEA1E6 101.48%); */
+      border-radius: 0px 20px 20px 0px;
+
+    }
+  }
+
+  @media (max-width: 768px) and (min-width: 601px) {
+    .dashboard_wall {
+      position: fixed;
+      bottom: 100px;
+      left: 0px;
+      min-width: 600px;
+    }
+
+    img.logo {
+      width: 80px;
+    }
+
+    p.title {
+      position: absolute;
+      bottom: 20px;
+      left: 80px;
+      font-size: 18px;
+      text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+    }
+
+    p.alamat {
+      position: absolute;
+      bottom: 10px;
+      left: 80px;
+      font-size: 10px;
+      text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+    }
+
+    div.coba.halo {
+      position: absolute;
+      width: 152px;
+      height: 20px;
+      left: 160px;
+      top: 420px;
+
+      font-family: Graphik;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 20px;
+      /* identical to box height */
+
+
+      color: #FFFFFF;
+    }
+
+    div.coba {
+      position: relative;
+      width: 365px;
+      height: 84px;
+      left: 0px;
+      top: 424px;
+      margin: 0;
+
+      /* background: linear-gradient(269.6deg, #56549E 0.35%, #AEA1E6 101.48%); */
+      border-radius: 0px 20px 20px 0px;
+
+    }
+  }
+
+  .badge-success {
+    background-color: #222;
+  }
+
+  .btn-group .btn-fab {
+    position: fixed !important;
+    right: 20px;
+    bottom: 60px;
+  }
+</style>
+
+<div class="dashboard_wall">
+  <img src="http://localhost/pintar/uploads/settings/logo.png" class="logo" width="120px" alt="">
+  <p class="title">mLITE Indonesia</p>
+  <p class="alamat">Jl. Perintis Kemerdekaan 45 - Barabai - Kalimantan Selatan</p>
+</div>
+<div class="btn-group">
+  <a href="javascript:void(0)" onclick="getDistanceFromLatLonInKm()" class="btn btn-danger btn-fab">
+    <i class="fa fa-camera"></i> Presensi Online
+  </a>
+</div>
+          <div class="alert alert-warning coba" role="alert">
+      <div class="halo">
+        <b>Halo Administrator</b>
+      </div>
+      <i class="fa fa-exclamation-triangle"></i> Anda Belum Presensi<br>
+      <i>*  
+Waktu yang hilang tidak akan pernah ditemukan lagi *</i>
+    </div>
+      <!-- The Modal -->
+<div class="modal" id="myModal" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close"><a href="http://localhost/pintar/admin">Close <span
+              aria-hidden="true">&times;</span></a></button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+        <center>
+          <div id="camera"></div><br>
+          <select class="form-control" id="shift" style="width:240px;">
+            <option>Pilih Shift</option>
+                      </select><br><br>
+          <input type="button" class="btn btn-info"
+            value="Presensi Masuk" data-dismiss="modal">
+          <input type="hidden" name="image" id="image-tag">
+          <div id="results"></div>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    function getDistanceFromLatLonInKm() {
+    window.navigator.geolocation.getCurrentPosition(function(pos) {
+      console.log(pos);
+      var units = 'm';
+      var latitude2 = '-2.58';
+      var longitude2 = '115.37';
+      var latitude1 = pos.coords.latitude;
+      var longitude1 = pos.coords.longitude;
+      var theta = longitude1 - longitude2;
+      var p = Math.PI;
+      var degradlat1 = latitude1 * p / 180;
+      var degradlat2 = latitude2 * p / 180;
+      var degradtheta = theta * p / 180;
+      var c = Math.cos;
+      var s = Math.sin;
+      var a = (s(degradlat1) * s(degradlat2)) + (c(degradlat1) * c(degradlat2) * c(degradtheta));
+      var a = Math.acos(a);
+      var a = a * 180 / p;
+      var a = a * 60 * 1.1515;
+      var kilometers = a * 1.609344;
+      var meters = kilometers * 1000;
+
+      if(meters > 2) {
+        alert('Presensi harus di area Rumah Sakit!!')
+      } else {
+        $('#myModal').modal('show', function () {
+        });
+      }
+    },
+   	function handleError(error) {
+      // Display error based on the error code.
+      const { code } = error;
+      switch (code) {
+        case GeolocationPositionError.TIMEOUT:
+          // Handle timeout.
+          alert('Koneksi Terputus')
+          break;
+        case GeolocationPositionError.PERMISSION_DENIED:
+          // User denied the request.
+        alert('Aktifkan GPS dan Izin Lokasi!!')
+          break;
+        case GeolocationPositionError.POSITION_UNAVAILABLE:
+          // Position not available.
+              alert('Lokasi Tidak Ditemukan!!')
+          break;
+      }
+    },
+    {timeout: 5000 , maximumAge: 0});
+  }
+  
+  $(document).ready(function () {
+
+    $('#shift').selectator('destroy');
+
+    $('#shift').on('change', function () {
+      var shift = this.value;
+    });
+
+    $('#myModal').on('show.bs.modal', function () {
+      Webcam.set({
+        width: 240,
+        height: 240,
+        image_format: 'jpeg',
+        jpeg_quality: 90,
+        facingMode: {
+          exact: 'environment'
+        }
+      });
+      Webcam.attach('#camera');
+      getDistanceFromLatLonInKm();
+    });
+    $("#myModal").on("hidden.bs.modal", function () {
+
+      var getshift = shift.value;
+      var shutter = new Audio();
+      shutter.autoplay = false;
+      shutter.src = navigator.userAgent.match(/Firefox/) ? 'http://localhost/pintar/plugins/dashboard/audio/shutter.ogg' : 'http://localhost/pintar/plugins/dashboard/audio/shutter.mp3';
+      shutter.play();
+
+      Webcam.snap(function (data_uri) {
+        document.getElementById('results').innerHTML = '<img id="imageprev" src="' + data_uri + '"/>';
+      });
+
+      var base64image = document.getElementById("imageprev").src;
+
+      Webcam.upload(base64image, 'http://localhost/pintar/admin/dashboard/upload?t=d6a63defd985&shift=' + getshift, function (code, text) {
+      });
+
+      Webcam.reset();
+
+      navigator.geolocation.getCurrentPosition(
+        function (position) {
+          $.post('http://localhost/pintar/admin/dashboard/geolocation?t=d6a63defd985', { lat: position.coords.latitude, lng: position.coords.longitude });
+        },
+        function error(err) { },
+        { enableHighAccuracy: true, timeout: 5000 }
+      );
+
+      window.location.href = 'http://localhost/pintar/admin';
+
+    });
+  });
+</script>
+      </div>
+
+      <!-- Content Header (Page header) -->
+
+      <!-- /.content -->
+      <div class="modal fade modal-xs" id="menuModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- <div class="modal fade modal-xs" data-backdrop="static" data-keyboard="false" id="menuModal"
+          aria-labelledby="exampleModalLabel" aria-hidden="true"> -->
+        <div class="modal-dialog  modal-dialog-centered" id="login">
+          <div class="modal-content">
+            <div class="modal-body">
+              <center>
+                <!-- <img src="http://localhost/pintar/uploads/settings/logo3.png" class="mb-2" style="width: 100%;max-height:100px;"> -->
+                <img src="http://localhost/pintar/uploads/settings/logo3.png" class="mb-2">
+              </center>
+              <form action="http://localhost/pintar/admin/" method="POST">
+                <div class="input-group mb-2 mr-sm-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text" style="background: white;border-right:none"><i class="fa fa-user"></i>
+                    </div>
+                  </div>
+                  <input type="text" name="username" style="border-left:none" class="form-control"
+                    placeholder="Username" required />
+                </div>
+                <div class="input-group mb-2 mr-sm-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text" style="background: white;border-right:none"><i class="fa fa-lock"></i>
+                    </div>
+                  </div>
+                  <input type="password" name="password" style="border-left:none" class="form-control"
+                    placeholder="Password" required />
+                </div>
+                <div class="d-flex form-group justify-content-between">
+                  <label class="remember-me">
+                    <input type="checkbox" name="remember_me" />
+                    Ingat saya
+                  </label>
+                  <button type="submit" name="login" class="btn btn-primary pull-right"
+                    style="background: #000080;">Login</button>
+                </div>
+              </form>
+                          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+      <strong>Copyright <a href="https://adminlte.io">PintarSehat</a>.</strong>
+      <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 0.1
+      </div>
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <script src="http://localhost/pintar/assets/plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="http://localhost/pintar/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="http://localhost/pintar/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="http://localhost/pintar/assets/plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="http://localhost/pintar/assets/plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="http://localhost/pintar/assets/plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="http://localhost/pintar/assets/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="http://localhost/pintar/assets/plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="http://localhost/pintar/assets/plugins/moment/moment.min.js"></script>
+  <script src="http://localhost/pintar/assets/plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="http://localhost/pintar/assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="http://localhost/pintar/assets/plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="http://localhost/pintar/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="http://localhost/pintar/assets/dist/js/adminlte.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="http://localhost/pintar/assets/dist/js/demo.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="http://localhost/pintar/assets/dist/js/pages/dashboard.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register("http://localhost/pintar/service-worker.js")
+          .then((swReg) => {
+            //console.log("Service Worker is registered", swReg);
+          })
+          .catch((err) => {
+            //console.error("Service Worker Error", err);
+          });
+      });
+    }
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("#cari_modul").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#list_modul li").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    $("#moduleModal").on('hidden.bs.modal', function (e) {
+      $("#moduleModal iframe").attr("src", $("#moduleModal iframe").attr("src"));
+    });
+  </script>
+  <!-- End PWA Support -->
+  <script src="http://localhost/pintar/themes/admin/js/scripts.js?v=2023-01-01 00:00:01&t=d6a63defd985"></script>
+  </body>
+
+</html>

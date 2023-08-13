@@ -1,0 +1,130 @@
+<div class="row" style="margin-bottom:100px;">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="btn-group pull-right" style="margin-top:-8px;">
+          <span class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+            <div id="btn_cetak" data-toggle="modal"><i class="fa fa-print"></i><span class="hidden-xs"> Cetak</span></div>
+          </span>
+        </div>
+        <h3 class="panel-title">Kelola Pasien</h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div id="notif"></div>
+        </div>
+                <div class="row">
+          <div id="form"></div>
+        </div>
+                <div class="row">
+          <div class="col col-md-6">
+                        <div class="searchbox-input form-inline padding-bottom-lg" style="margin-top:5px;margin-bottom:15px;">
+              <div class="input-group" id="index">
+                <input class="btn btn-default" type="button" id="bukaform" value="Buka Form" />
+              </div>
+            </div>
+                      </div>
+          <div class="col col-md-6">
+            <div class="searchbox-input form-inline pull-right padding-bottom-lg" style="margin-top:5px;margin-bottom:15px;">
+              <div class="input-group">
+                <input type="text" name="cari" minlength="3" class="form-control" placeholder="Pencarian..." required>
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <div id="display">
+  <div class="table-responsive no-margin">
+    <table class="table table-striped no-padding" width="100%">
+      <thead>
+        <tr>
+          <th>No. RM</th>
+          <th>Nama Pasien</th>
+          <th>Tgl. Lahir</th>
+          <th>Jenis Kelamin</th>
+                    <th>Alamat</th>
+          <th>Telepon</th>
+          <th>Tgl. Daftar</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+                        <tr>
+          <td style="white-space: nowrap;">
+            <span class="dropdown-toggle" data-toggle="dropdown" data-disabled="true" aria-expanded="true"><button type="button" name="button" class="btn btn-sm btn-default">000001 <span class="caret"></span></button></span>
+            <ul class="dropdown-menu" role="menu">
+                              <li><a href="http://localhost/pintar/admin/pasien/vclaim_bynokartu/123214124/2023-08-12?t=d6a63defd985" data-toggle="modal" data-target="#asuransiModal">[BPJS] Cek Nomor Kartu</a></li>
+                <li><a href="http://localhost/pintar/admin/pasien/vclaim_bynik/1424124213/2023-08-12?t=d6a63defd985" data-toggle="modal" data-target="#asuransiModal">[BPJS] Cek Nomor KTP</a></li>
+                            <li><a href="http://localhost/pintar/admin/pasien/riwayatperawatan/000001?t=d6a63defd985" data-toggle="modal" data-target="#riwayatModal">Elektronik Rekam Medis</a></li>
+            </ul>
+          </td>
+          <td class="edit" data-no_rkm_medis="000001" style="white-space: nowrap;"><a href="http://localhost/pintar/admin/pasien/riwayatperawatan/000001?t=d6a63defd985" data-toggle="modal" data-target="#riwayatModal">zahro</a></td>
+          <td class="edit" data-no_rkm_medis="000001" style="white-space: nowrap;">2023-08-14</td>
+          <td class="edit" data-no_rkm_medis="000001" style="white-space: nowrap;">Laki-Laki</td>
+                    <td class="edit" data-no_rkm_medis="000001" style="white-space: nowrap;">kalten</td>
+          <td class="edit" data-no_rkm_medis="000001" style="white-space: nowrap;">2112512312</td>
+          <td class="edit" data-no_rkm_medis="000001" style="white-space: nowrap;">2023-08-07</td>
+          <td class="edit" data-no_rkm_medis="000001" style="white-space: nowrap;">roned@mailinator.com</td>
+        </tr>
+                      </tbody>
+    </table>
+  </div>
+  <nav class="row clearfix">
+    <div class="col-md-6">
+      <b>Jumlah: 1</b>
+    </div>
+    <div class="col-md-6">
+      <ul class="pagination no-margin pull-right">
+                      <li class="disabled"><a href="#">&laquo;</a></li>
+                        <li class="disabled"><a href="#">‹</a></li>
+                <li class="disabled"><a href="#">Hal : 1 dari 1 Hal</a></li>
+                <li class="disabled"><a href="#">›</a></li>
+                        <li class="disabled"><a href="#">&raquo;</a></li>
+                    </ul>
+    </div>
+  </nav>
+</div>
+<div class="modal fade" id="asuransiModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="riwayatModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-full" role="document">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="printModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+  $(".alert-dismissible").fadeTo(3000, 500).slideUp(500);
+  $("#btn_cetak").click(function() {
+    var baseURL = mlite.url + '/' + mlite.admin;
+    var url    = baseURL + '/pasien/cetak?t=' + mlite.token;
+    var cari = $('input:text[name=cari]').val();
+
+    $.post(url, {cari: cari} ,function(data) {
+      //window.open(baseURL + '/pasien/cetakpdf?t=' + mlite.token);
+      $("#printModal").modal('show').html('<div style="text-align:center;margin:20px auto;width:90%;height:95%;"><iframe src="' + baseURL + '/pasien/cetakpdf?t=' + mlite.token + '" frameborder="no" width="100%" height="100%"></iframe></div>');
+    });
+
+		return false;
+  });
+</script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
